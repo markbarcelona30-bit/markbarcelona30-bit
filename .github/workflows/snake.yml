@@ -1,0 +1,41 @@
+name: Update contribution snake
+
+on:
+  schedule:
+    - cron: '23 22 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/snake.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-snake
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Generate light and dark contribution snakes
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake-light.svg?color_snake=#7c3aed&color_dots=#e2e8f0,#c4b5fd,#a78bfa,#7c3aed,#087e96
+            assets/snake-dark.svg?palette=github-dark&color_snake=#22d3ee&color_dots=#1e293b,#4c1d95,#7c3aed,#a78bfa,#22d3ee
+      - name: Save updated animations
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/snake-light.svg assets/snake-dark.svg
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh contribution snake'
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
