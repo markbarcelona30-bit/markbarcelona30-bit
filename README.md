@@ -54,6 +54,12 @@ A responsive dog hotel website that connects a welcoming public experience with 
 ## Contribution activity
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/snake-light.svg" />
+  <img src="assets/snake-light.svg" alt="Animated snake moving through Mark's GitHub contribution graph" width="100%" />
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=markbarcelona30-bit&amp;bg_color=0A101F&amp;color=A78BFA&amp;line=22D3EE&amp;point=C4B5FD&amp;area=true&amp;hide_border=true" />
   <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=markbarcelona30-bit&amp;bg_color=F8FAFC&amp;color=7C3AED&amp;line=087E96&amp;point=7C3AED&amp;area=true&amp;hide_border=true" />
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=markbarcelona30-bit&amp;bg_color=F8FAFC&amp;color=7C3AED&amp;line=087E96&amp;point=7C3AED&amp;area=true&amp;hide_border=true" alt="Mark's recent GitHub contribution activity" width="100%" />
