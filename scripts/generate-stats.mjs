@@ -30,10 +30,10 @@ if(profile.errors?.length) throw new Error(`GitHub stats query failed: ${profile
 const user = profile.data?.user;
 const values = [
   ['Total stars earned',repos.reduce((total,repo)=>total+repo.stargazers_count,0)],
-  ['Commits (last year)',user?.contributionsCollection?.totalCommitContributions],
+  ['Public commits (last year)',user?.contributionsCollection?.totalCommitContributions],
   ['Total PRs',user?.pullRequests?.totalCount],
   ['Total issues',user?.issues?.totalCount],
-  ['Repos with commits (last year)',user?.contributionsCollection?.totalRepositoriesWithContributedCommits],
+  ['Repos with public commits (year)',user?.contributionsCollection?.totalRepositoriesWithContributedCommits],
 ];
 if(values.some(([,value])=>!Number.isInteger(value)||value<0)) throw new Error('GitHub returned invalid statistics.');
 const languages = new Map();
@@ -48,7 +48,7 @@ const ranked = [...languages].filter(([,bytes])=>bytes>0).sort((a,b)=>b[1]-a[1])
 const totalBytes = ranked.reduce((total,[,bytes])=>total+bytes,0);
 const displayed = ranked.slice(0,7);
 if(ranked.length>7) displayed.push(['Other',ranked.slice(7).reduce((total,[,bytes])=>total+bytes,0)]);
-const colors = { TypeScript:'#3178c6', JavaScript:'#f1e05a', HTML:'#e34c26', CSS:'#663399', Python:'#3572a5', Java:'#b07219', Shell:'#89e051', Go:'#00add8', Ruby:'#701516', Vue:'#41b883', Other:'#8b949e' };
+const colors = { TypeScript:'#3178c6', JavaScript:'#f1e05a', HTML:'#e34c26', CSS:'#663399', Python:'#3572a5', Java:'#b07219', Shell:'#89e051', Go:'#00add8', Ruby:'#701516', Vue:'#41b883', PLpgSQL:'#336790', PowerShell:'#5391fe', Other:'#8b949e' };
 const escape = text=>String(text).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const updated = new Intl.DateTimeFormat('en',{dateStyle:'medium',timeZone:'Asia/Manila'}).format(now);
 const icons = [
@@ -74,7 +74,7 @@ for(const theme of ['dark','light']) {
 ${values.map(([label,value],i)=>`<svg x="28" y="${69+i*36}" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="${c.icon}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${icons[i]}</svg><text x="62" y="${85+i*36}" font-size="17" fill="${c.text}" font-weight="600">${escape(label)}</text><text x="550" y="${85+i*36}" text-anchor="end" font-size="19" font-weight="600" fill="${c.value}">${value.toLocaleString('en')}</text>`).join('')}
 <text x="640" y="40" fill="${c.title}" font-size="22" font-weight="600">Most Used Languages</text>
 ${totalBytes?`<g clip-path="url(#language-bar)">${bar}</g>${displayed.map(([name,bytes],i)=>{const x=640+(i%2)*260,y=126+Math.floor(i/2)*31;return `<circle cx="${x+5}" cy="${y-5}" r="5" fill="${colors[name]??c.icon}"/><text x="${x+18}" y="${y}" fill="${c.text}" font-size="14">${escape(name)} ${(100*bytes/totalBytes).toFixed(2)}%</text>`;}).join('')}`:`<text x="640" y="126" fill="${c.text}" font-size="17">No language data yet</text>`}
-<text x="28" y="286" fill="${c.text}" font-size="12">Updated ${updated} · GitHub activity</text>
+<text x="28" y="286" fill="${c.text}" font-size="12">Updated ${updated} · public GitHub activity</text>
 <text x="640" y="286" fill="${c.text}" font-size="12">Public repositories · by code size · excludes forks</text>
 </g></svg>`;
   outputs.push([`${directory}stats-${theme}.svg`,svg]);
