@@ -3,9 +3,9 @@
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/e2a724e6e7420405c343e84c5fe1b876fa0485b0/assets/hero-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/e2a724e6e7420405c343e84c5fe1b876fa0485b0/assets/hero-light.svg" />
-  <img src="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/e2a724e6e7420405c343e84c5fe1b876fa0485b0/assets/hero-light.svg" alt="Animated Visual Map: Mark Medina, React, Java, Supabase, GitHub and Vercel." width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/5cc84a1fc56487c605ac3138e4e6302552b32d25/assets/hero-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/5cc84a1fc56487c605ac3138e4e6302552b32d25/assets/hero-light.svg" />
+  <img src="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/5cc84a1fc56487c605ac3138e4e6302552b32d25/assets/hero-light.svg" alt="Animated Visual Map: Mark Medina, React, Java, Supabase, GitHub and Vercel." width="100%" />
 </picture>
 
 <picture>
