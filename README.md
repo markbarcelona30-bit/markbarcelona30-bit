@@ -3,9 +3,9 @@
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/a89ee85dc04ec4bf6082a87ce09ed34d96fd3de6/assets/hero-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/a89ee85dc04ec4bf6082a87ce09ed34d96fd3de6/assets/hero-light.svg" />
-  <img src="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/a89ee85dc04ec4bf6082a87ce09ed34d96fd3de6/assets/hero-light.svg" alt="Animated particle portrait of Mark Medina — Full Stack Solo Web App Developer." width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/3d8f3464b11db7bfc34728da44d0311bf93e3eb3/assets/hero-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/3d8f3464b11db7bfc34728da44d0311bf93e3eb3/assets/hero-light.svg" />
+  <img src="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/3d8f3464b11db7bfc34728da44d0311bf93e3eb3/assets/hero-light.svg" alt="Animated particle portrait of Mark Medina — Full Stack Solo Web App Developer." width="100%" />
 </picture>
 
 <p align="center">
@@ -24,6 +24,12 @@ My current work includes **Pawhaus**: a dog hotel website with a booking flow an
 - **Building:** web experiences, booking flows, and everyday tools.
 - **Working with:** JavaScript, TypeScript, Node.js, and PostgreSQL.
 - **Improving:** the details between a first idea and a working product.
+
+## Contact
+
+**Grid.Mail** · [markbarcelona30@gmail.com](mailto:markbarcelona30@gmail.com)  
+**Grid.Portfolio** · [markmedina.vercel.app](https://markmedina.vercel.app/)  
+**Grid.Github** · [@markbarcelona30-bit](https://github.com/markbarcelona30-bit)
 
 ## Tools I build with
 
