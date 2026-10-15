@@ -3,9 +3,9 @@
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg" />
-  <img src="assets/hero-light.svg" alt="Mark Medina — JavaScript, TypeScript, Node.js and PostgreSQL. Currently building Pawhaus." width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/a89ee85dc04ec4bf6082a87ce09ed34d96fd3de6/assets/hero-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/a89ee85dc04ec4bf6082a87ce09ed34d96fd3de6/assets/hero-light.svg" />
+  <img src="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/a89ee85dc04ec4bf6082a87ce09ed34d96fd3de6/assets/hero-light.svg" alt="Animated particle portrait of Mark Medina — Full Stack Solo Web App Developer." width="100%" />
 </picture>
 
 <p align="center">
