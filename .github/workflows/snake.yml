@@ -1,4 +1,4 @@
-name: Update contribution snake
+name: Update contribution visuals
 
 on:
   schedule:
@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - .github/workflows/snake.yml
+      - scripts/generate-activity.mjs
 
 permissions:
   contents: write
@@ -22,6 +23,15 @@ jobs:
     steps:
       - name: Check out profile
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Generate contribution activity graphs
+        id: activity
+        continue-on-error: true
+        run: node scripts/generate-activity.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Retain previous graph if GitHub is temporarily unavailable
+        if: steps.activity.outcome == 'failure'
+        run: echo '::warning::Activity graph refresh failed. Existing graph assets will be retained.'
       - name: Generate light and dark contribution snakes
         uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
         with:
@@ -34,8 +44,11 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add assets/snake-light.svg assets/snake-dark.svg
+          if [ -f assets/activity-light.svg ] && [ -f assets/activity-dark.svg ]; then
+            git add assets/activity-light.svg assets/activity-dark.svg
+          fi
           if ! git diff --cached --quiet; then
-            git commit -m 'Refresh contribution snake'
+            git commit -m 'Refresh contribution visuals'
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
