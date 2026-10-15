@@ -14,6 +14,20 @@
   <img src="assets/stats-light.svg" alt="Mark Medina's GitHub Stats and Most Used Languages" width="100%" />
 </picture>
 
+## Contribution activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/snake-light.svg" />
+  <img src="assets/snake-light.svg" alt="Animated snake moving through Mark's GitHub contribution graph" width="100%" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg" />
+  <img src="assets/activity-light.svg" alt="Mark's recent GitHub contribution activity" width="100%" />
+</picture>
+
 <p align="center">
   <a href="https://github.com/markbarcelona30-bit/pawhaus-landing"><img src="https://img.shields.io/badge/Explore-Pawhaus-7C3AED?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Explore the Pawhaus repository" /></a>
   <a href="https://pawhaus-hotel.vercel.app/"><img src="https://img.shields.io/badge/Visit-Live_Project-087E96?style=for-the-badge&amp;logo=vercel&amp;logoColor=white" alt="Visit the Pawhaus website" /></a>
@@ -63,18 +77,6 @@ A responsive dog hotel website that connects a welcoming public experience with 
 
 </details>
 
-## Contribution activity
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/snake-light.svg" />
-  <img src="assets/snake-light.svg" alt="Animated snake moving through Mark's GitHub contribution graph" width="100%" />
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg" />
-  <img src="assets/activity-light.svg" alt="Mark's recent GitHub contribution activity" width="100%" />
-</picture>
 
 <p align="center"><sub>Build something useful. Refine the details. Keep learning.</sub></p>
