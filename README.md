@@ -31,6 +31,7 @@
 <p align="center">
   <a href="https://github.com/markbarcelona30-bit/pawhaus-landing"><img src="https://img.shields.io/badge/Explore-Pawhaus-7C3AED?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Explore the Pawhaus repository" /></a>
   <a href="https://pawhaus-hotel.vercel.app/"><img src="https://img.shields.io/badge/Visit-Live_Project-087E96?style=for-the-badge&amp;logo=vercel&amp;logoColor=white" alt="Visit the Pawhaus website" /></a>
+  <a href="https://markmedina.vercel.app/"><img src="https://img.shields.io/badge/View-My_Portfolio-7C3AED?style=for-the-badge&amp;logo=vercel&amp;logoColor=white" alt="Visit Mark Medina's portfolio" /></a>
 </p>
 
 ---
