@@ -8,6 +8,7 @@ on:
     paths:
       - .github/workflows/snake.yml
       - scripts/generate-activity.mjs
+      - scripts/generate-stats.mjs
 
 permissions:
   contents: write
@@ -32,6 +33,15 @@ jobs:
       - name: Retain previous graph if GitHub is temporarily unavailable
         if: steps.activity.outcome == 'failure'
         run: echo '::warning::Activity graph refresh failed. Existing graph assets will be retained.'
+      - name: Generate GitHub stats and language cards
+        id: stats
+        continue-on-error: true
+        run: node scripts/generate-stats.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Retain previous stats if GitHub is temporarily unavailable
+        if: steps.stats.outcome == 'failure'
+        run: echo '::warning::Stats refresh failed. Existing stats assets will be retained.'
       - name: Generate light and dark contribution snakes
         uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
         with:
@@ -46,6 +56,9 @@ jobs:
           git add assets/snake-light.svg assets/snake-dark.svg
           if [ -f assets/activity-light.svg ] && [ -f assets/activity-dark.svg ]; then
             git add assets/activity-light.svg assets/activity-dark.svg
+          fi
+          if [ -f assets/stats-light.svg ] && [ -f assets/stats-dark.svg ]; then
+            git add assets/stats-light.svg assets/stats-dark.svg
           fi
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh contribution visuals'
