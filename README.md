@@ -3,9 +3,9 @@
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/3d8f3464b11db7bfc34728da44d0311bf93e3eb3/assets/hero-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/3d8f3464b11db7bfc34728da44d0311bf93e3eb3/assets/hero-light.svg" />
-  <img src="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/3d8f3464b11db7bfc34728da44d0311bf93e3eb3/assets/hero-light.svg" alt="Animated particle portrait of Mark Medina — Full Stack Solo Web App Developer." width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/cb59a7374e774d129d7e465d1404073b771efbdf/assets/hero-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/cb59a7374e774d129d7e465d1404073b771efbdf/assets/hero-light.svg" />
+  <img src="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/cb59a7374e774d129d7e465d1404073b771efbdf/assets/hero-light.svg" alt="Animated Visual Map: Mark Medina, React, Java, Supabase, GitHub and Vercel." width="100%" />
 </picture>
 
 <p align="center">
