@@ -8,6 +8,12 @@
   <img src="https://raw.githubusercontent.com/markbarcelona30-bit/markbarcelona30-bit/e2a724e6e7420405c343e84c5fe1b876fa0485b0/assets/hero-light.svg" alt="Animated Visual Map: Mark Medina, React, Java, Supabase, GitHub and Vercel." width="100%" />
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg" />
+  <img src="assets/stats-light.svg" alt="Mark Medina's GitHub Stats and Most Used Languages" width="100%" />
+</picture>
+
 <p align="center">
   <a href="https://github.com/markbarcelona30-bit/pawhaus-landing"><img src="https://img.shields.io/badge/Explore-Pawhaus-7C3AED?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Explore the Pawhaus repository" /></a>
   <a href="https://pawhaus-hotel.vercel.app/"><img src="https://img.shields.io/badge/Visit-Live_Project-087E96?style=for-the-badge&amp;logo=vercel&amp;logoColor=white" alt="Visit the Pawhaus website" /></a>
